@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bize de mi Flappy?</title>
+    <style>
+        body
+        {
+            margin:0;
+            padding:0;
+            background:black;
+        }
+        #tual
+        {
+            position:relative;
+            width: 558px;
+            height:430px;
+            background:white;
+            margin: 100px auto 0px;
+            overflow:hidden;
+
+        }
+        #arka
+        {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:1116px;
+            height: 430px;
+            background:url(resimler/arka.png) repeat-x;
+            animation-name: arkaanimasyon;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+        }
+        
+
+        @keyframes arkaanimasyon
+        {
+            from { left:0px; }
+            to {left:-558px;}
+        }
+
+        #kus
+        {
+            position:absolute;
+            width:50px;
+            height:32px;
+            top:150px;
+            left:100px;
+            background: url(resimler/kus.png) no-repeat;
+            background-size:contain;
+
+            animation-name: animasyonkus;
+            animation-duration: 0.5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+
+        @keyframes animasyonkus
+        {
+            from { top:150px; }
+            to { top:140px; }
+
+        }
+
+        #boru1,#boru2
+        {
+            position:absolute;
+            width:65px;
+            height:150px;
+            top:205px;
+            left:300px;
+            background: url(resimler/boru.png) no-repeat;
+            background-size:cover; 
+
+            animation-name: animasyonboru1;
+            animation-duration: 7.7s;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        #boru2
+        {
+            top:-30px;
+            transform: rotate(180deg);
+        }
+
+        @keyframes animasyonboru1
+        {
+            from { left: 600px }
+            to { left:-100px; }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="tual">
+        <div id="arka"></div>
+        <div id="kus"></div>
+        <div id="boru1"></div>
+        <div id="boru2"></div>
+    </div>
+</body>
+</html>
